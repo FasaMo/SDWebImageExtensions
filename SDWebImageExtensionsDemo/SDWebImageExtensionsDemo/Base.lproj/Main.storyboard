@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-97-2tL">
+                                <rect key="frame" x="90" y="49" width="420" height="420"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ROq-97-2tL" secondAttribute="height" multiplier="1:1" id="gBE-jA-Rm3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRJ-s1-DUY">
+                                <rect key="frame" x="180" y="499" width="80" height="30"/>
+                                <state key="normal" title="ClearCache"/>
+                                <connections>
+                                    <action selector="onClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlU-Gg-BIE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeW-Ep-qkJ">
+                                <rect key="frame" x="344" y="499" width="73" height="30"/>
+                                <state key="normal" title="DownLoad"/>
+                                <connections>
+                                    <action selector="onLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vUe-yG-jIw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLl-iV-1VW">
+                                <rect key="frame" x="300" y="541" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69310849839999999" green="0.69171354860000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ROq-97-2tL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="8cC-da-mEq"/>
+                            <constraint firstItem="HLl-iV-1VW" firstAttribute="top" secondItem="BeW-Ep-qkJ" secondAttribute="bottom" constant="12" id="AEO-hq-WEw"/>
+                            <constraint firstItem="bRJ-s1-DUY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="JSd-df-tD5"/>
+                            <constraint firstItem="BeW-Ep-qkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="JWZ-Aq-zco"/>
+                            <constraint firstItem="bRJ-s1-DUY" firstAttribute="centerY" secondItem="BeW-Ep-qkJ" secondAttribute="centerY" id="Qwu-vR-bSY"/>
+                            <constraint firstItem="ROq-97-2tL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-41" id="Ybz-TK-MmQ"/>
+                            <constraint firstItem="ROq-97-2tL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdC-pX-v3h"/>
+                            <constraint firstItem="BeW-Ep-qkJ" firstAttribute="top" secondItem="ROq-97-2tL" secondAttribute="bottom" constant="30" id="qpm-0o-bSk"/>
+                            <constraint firstItem="HLl-iV-1VW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zdB-6x-5ch"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ROq-97-2tL" id="wbi-Id-7II"/>
+                        <outlet property="progressLabel" destination="HLl-iV-1VW" id="wvn-Fn-XWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="398"/>
+        </scene>
+    </scenes>
+</document>
