@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
 
   s.author             = { "FasaMo" => "Fasa_Mo@iCloud.com" }
   s.social_media_url   = "http://weibo.com/FasaMo"
+  s.platform     = :ios, "6.0"
 
-#  s.source       = { :git => "https://github.com/FasaMo/SDWebImageExtensions.git", :tag => s.version }
-  s.source	 = { :git => "/Users/fasamo/Documents/iOS/github/SDWebImageExtensions", :tag => s.version }
+  s.source       = { :git => "https://github.com/FasaMo/SDWebImageExtensions.git", :tag => s.version }
   s.source_files  = "SDWebImage+FSExtensions/*.{h,m}"
   s.requires_arc = true
   s.dependency "SDWebImage", "~> 3.7"
